@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, HStack, VStack,  Button, Avatar, Text} from '@chakra-ui/react';
+import { Box, Heading,Stack,  VStack,  Button, Avatar, Text} from '@chakra-ui/react';
 import avtr from "../assets/avtr.png";
 
 
@@ -8,14 +8,14 @@ const Footer1 = () => {
     <Box bgColor={'blackAlpha.800'} minH={'30vh'} pt={'8'} pr={'2'}color={'white'}> 
    
 
-        <HStack pt={'8'} p={'8'} justifyContent={"space-evenly"} >
+        <Stack pt={'8'} p={'8'} justifyContent={"space-evenly"} direction={['column','row']}>
              <VStack>
                    <Heading size={'sm'}>Contact Me</Heading>
                    <Button><a href='https://www.instagram.com/manvender_024/'>Instagram</a></Button>
                    <Button><a href='https://www.linkedin.com/in/manvender-meena-24548b277/'>LinkedIn</a></Button>
                    <Button><a href='https://github.com/Manvender-code'>GitHub</a></Button>
               </VStack>
-              <VStack>
+              <VStack p={['0','2']}>
               <Text
             fontSize={"small"}
             letterSpacing={"widest"}
@@ -36,7 +36,7 @@ const Footer1 = () => {
           <Avatar boxSize={"28"} mt={["4", "0"]} src={avtr} />
           <Text>Our Creator</Text>
         </VStack>
-        </HStack>
+        </Stack>
     </Box>
   )
 }
